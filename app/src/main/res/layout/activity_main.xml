@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnMenuBells"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bell1"
+                tools:src="@drawable/bell1" />
+
+            <ImageButton
+                android:id="@+id/btnMenuAnimals"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/animal1"
+                tools:src="@drawable/animal1" />
+
+            <ImageButton
+                android:id="@+id/btnMenuTransport"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/transport1"
+                tools:src="@drawable/transport1" />
+
+            <ImageButton
+                android:id="@+id/btnMenuInstruments"
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/instrument1"
+                tools:src="@drawable/instrument1" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/btnImgPrev"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/previous" />
+
+            <ImageButton
+                android:id="@+id/btnImgSound"
+                android:layout_width="500dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="?attr/actionModeBackground"
+                android:scaleType="fitCenter"
+                android:src="@drawable/bell1" />
+
+            <ImageButton
+                android:id="@+id/btnImgNext"
+                android:layout_width="30dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:scaleType="fitCenter"
+                android:src="@drawable/next" />
+        </LinearLayout>
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>
