@@ -1,0 +1,138 @@
+{
+    "activeType": "BELLS",
+    "animals": [
+        {
+            "drawableActiveImage": 2131165305,
+            "drawableBaseImage": 2131165304,
+            "rawSound": 2131689472
+        },
+        {
+            "drawableActiveImage": 2131165307,
+            "drawableBaseImage": 2131165306,
+            "rawSound": 2131689473
+        },
+        {
+            "drawableActiveImage": 2131165309,
+            "drawableBaseImage": 2131165308,
+            "rawSound": 2131689474
+        },
+        {
+            "drawableActiveImage": 2131165311,
+            "drawableBaseImage": 2131165310,
+            "rawSound": 2131689475
+        },
+        {
+            "drawableActiveImage": 2131165313,
+            "drawableBaseImage": 2131165312,
+            "rawSound": 2131689476
+        },
+        {
+            "drawableActiveImage": 2131165315,
+            "drawableBaseImage": 2131165314,
+            "rawSound": 2131689477
+        }
+    ],
+    "bells": [
+        {
+            "drawableActiveImage": 2131165319,
+            "drawableBaseImage": 2131165318,
+            "rawSound": 2131689478
+        },
+        {
+            "drawableActiveImage": 2131165321,
+            "drawableBaseImage": 2131165320,
+            "rawSound": 2131689479
+        },
+        {
+            "drawableActiveImage": 2131165323,
+            "drawableBaseImage": 2131165322,
+            "rawSound": 2131689480
+        },
+        {
+            "drawableActiveImage": 2131165325,
+            "drawableBaseImage": 2131165324,
+            "rawSound": 2131689481
+        },
+        {
+            "drawableActiveImage": 2131165327,
+            "drawableBaseImage": 2131165326,
+            "rawSound": 2131689482
+        }
+    ],
+    "currentPosition": 0,
+    "instruments": [
+        {
+            "drawableActiveImage": 2131165356,
+            "drawableBaseImage": 2131165355,
+            "rawSound": 2131689483
+        },
+        {
+            "drawableActiveImage": 2131165358,
+            "drawableBaseImage": 2131165357,
+            "rawSound": 2131689484
+        },
+        {
+            "drawableActiveImage": 2131165360,
+            "drawableBaseImage": 2131165359,
+            "rawSound": 2131689485
+        },
+        {
+            "drawableActiveImage": 2131165362,
+            "drawableBaseImage": 2131165361,
+            "rawSound": 2131689486
+        },
+        {
+            "drawableActiveImage": 2131165364,
+            "drawableBaseImage": 2131165363,
+            "rawSound": 2131689487
+        },
+        {
+            "drawableActiveImage": 2131165366,
+            "drawableBaseImage": 2131165365,
+            "rawSound": 2131689488
+        },
+        {
+            "drawableActiveImage": 2131165368,
+            "drawableBaseImage": 2131165367,
+            "rawSound": 2131689489
+        },
+        {
+            "drawableActiveImage": 2131165370,
+            "drawableBaseImage": 2131165369,
+            "rawSound": 2131689490
+        }
+    ],
+    "isActive": false,
+    "transports": [
+        {
+            "drawableActiveImage": 2131165448,
+            "drawableBaseImage": 2131165447,
+            "rawSound": 2131689491
+        },
+        {
+            "drawableActiveImage": 2131165450,
+            "drawableBaseImage": 2131165449,
+            "rawSound": 2131689492
+        },
+        {
+            "drawableActiveImage": 2131165452,
+            "drawableBaseImage": 2131165451,
+            "rawSound": 2131689493
+        },
+        {
+            "drawableActiveImage": 2131165454,
+            "drawableBaseImage": 2131165453,
+            "rawSound": 2131689494
+        },
+        {
+            "drawableActiveImage": 2131165456,
+            "drawableBaseImage": 2131165455,
+            "rawSound": 2131689495
+        },
+        {
+            "drawableActiveImage": 2131165458,
+            "drawableBaseImage": 2131165457,
+            "rawSound": 2131689496
+        }
+    ]
+}

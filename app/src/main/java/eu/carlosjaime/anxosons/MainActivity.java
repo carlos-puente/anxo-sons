@@ -2,15 +2,21 @@ package eu.carlosjaime.anxosons;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Dialog;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
 import android.graphics.drawable.Drawable;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.widget.ImageButton;
+import android.widget.Toast;
+
+import com.google.gson.Gson;
+
+import java.io.InputStream;
+import java.util.Scanner;
 
 import eu.carlosjaime.anxosons.definition.ItemType;
-import eu.carlosjaime.anxosons.helper.Helper;
 import eu.carlosjaime.anxosons.objects.ItemCollection;
 
 public class MainActivity extends AppCompatActivity {
@@ -24,15 +30,27 @@ public class MainActivity extends AppCompatActivity {
     private Context context = this;
     private MediaPlayer mediaPlayer;
     private ItemCollection itemCollection = new ItemCollection();
-
+private String test = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_SENSOR_LANDSCAPE);
-        Helper.fillItems(itemCollection);
+        getData();
         setButtons();
+    }
+
+    private void getData() {
+        try {
+            InputStream inputStream = context.getResources().openRawResource(R.raw.data);
+            String jsonString = new Scanner(inputStream).useDelimiter("\\A").next();
+            Gson gson = new Gson();
+            itemCollection = gson.fromJson(jsonString, ItemCollection.class);
+        } catch (Exception ex){
+            Toast.makeText(context, "Error loading data: "+ ex.getMessage(), Toast.LENGTH_LONG);
+            itemCollection = new ItemCollection();
+        }
     }
 
     private void setButtons() {

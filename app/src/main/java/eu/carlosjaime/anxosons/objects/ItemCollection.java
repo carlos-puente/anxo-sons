@@ -1,21 +1,54 @@
 package eu.carlosjaime.anxosons.objects;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
 import eu.carlosjaime.anxosons.definition.ItemType;
 
-public class ItemCollection {
+public class ItemCollection implements Serializable {
     private boolean isActive = false;
     private int currentPosition = 0;
     private ItemType activeType = ItemType.BELLS;
-    private static List<Item> bells = new ArrayList<>();
-    private static List<Item> animals = new ArrayList<>();
-    private static List<Item> transports = new ArrayList<>();
-    private static List<Item> instruments = new ArrayList<>();
+    private  List<Item> bells = new ArrayList<>();
+    private  List<Item> animals = new ArrayList<>();
+    private  List<Item> transports = new ArrayList<>();
+    private  List<Item> instruments = new ArrayList<>();
 
     public boolean isActive() {
         return isActive;
+    }
+
+    public  List<Item> getBells() {
+        return bells;
+    }
+
+    public  void setBells(List<Item> bells) {
+        this.bells = bells;
+    }
+
+    public  List<Item> getAnimals() {
+        return animals;
+    }
+
+    public  void setAnimals(List<Item> animals) {
+        this.animals = animals;
+    }
+
+    public  List<Item> getTransports() {
+        return transports;
+    }
+
+    public  void setTransports(List<Item> transports) {
+        this.transports = transports;
+    }
+
+    public  List<Item> getInstruments() {
+        return instruments;
+    }
+
+    public  void setInstruments(List<Item> instruments) {
+        this.instruments = instruments;
     }
 
     public void setActive(boolean active) {
