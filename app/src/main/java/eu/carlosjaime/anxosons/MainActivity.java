@@ -43,7 +43,7 @@ private String test = "";
 
     private void getData() {
         try {
-            InputStream inputStream = context.getResources().openRawResource(R.raw.data);
+            InputStream inputStream = this.getAssets().open("data.json");
             String jsonString = new Scanner(inputStream).useDelimiter("\\A").next();
             Gson gson = new Gson();
             itemCollection = gson.fromJson(jsonString, ItemCollection.class);
