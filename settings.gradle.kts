@@ -13,6 +13,6 @@ dependencyResolutionManagement {
     }
 }
 
-rootProject.name = "anxoSons"
+rootProject.name = "anxo-sons"
 include(":app")
  
