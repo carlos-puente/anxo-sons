@@ -1,2 +1,2 @@
 # anxo-sons
- An image&sounds game for my son
+ An image&sounds Android game for my two years old son
