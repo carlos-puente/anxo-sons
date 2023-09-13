@@ -26,6 +26,10 @@ public class ItemCollection {
         this.activeType = activeType;
     }
 
+    public ItemType getActiveType() {
+        return activeType;
+    }
+
     public void addItem(Item item, ItemType itemType) {
         switch (itemType) {
             case INSTRUMENTS:
