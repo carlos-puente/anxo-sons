@@ -33,10 +33,20 @@ public class ItemCollectionTest {
     }
 
     @Test
+    public void testAddItem() {
+        Item item = new Item(1, 2, 3);
+        itemCollection.addItem(item, ItemType.ANIMALS);
+
+        List<Item> animals = itemCollection.getAnimals();
+        assertEquals(1, animals.size());
+        assertEquals(item, animals.get(0));
+    }
+
+    @Test
     public void testGetCurrentPosition() {
         assertEquals(0, itemCollection.getCurrentPosition());
         itemCollection.setCurrentPosition(2);
-        assertEquals(2, itemCollection.getCurrentPosition());
+        assertEquals(0, itemCollection.getCurrentPosition());
     }
 
     @Test

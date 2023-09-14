@@ -16,6 +16,7 @@ import com.google.gson.Gson;
 import java.io.InputStream;
 import java.util.Scanner;
 
+import eu.carlosjaime.anxosons.definition.Constants;
 import eu.carlosjaime.anxosons.definition.ItemType;
 import eu.carlosjaime.anxosons.objects.ItemCollection;
 
@@ -43,12 +44,11 @@ private String test = "";
 
     private void getData() {
         try {
-            InputStream inputStream = this.getAssets().open("data.json");
-            String jsonString = new Scanner(inputStream).useDelimiter("\\A").next();
-            Gson gson = new Gson();
-            itemCollection = gson.fromJson(jsonString, ItemCollection.class);
+            InputStream inputStream = this.getAssets().open(Constants.DATA_JSON);
+            String jsonString = new Scanner(inputStream).useDelimiter(Constants.JSON_DELIMITER).next();
+            itemCollection = new Gson().fromJson(jsonString, ItemCollection.class);
         } catch (Exception ex){
-            Toast.makeText(context, "Error loading data: "+ ex.getMessage(), Toast.LENGTH_LONG);
+            Toast.makeText(context, getString(R.string.error_loading_data)+ ex.getMessage(), Toast.LENGTH_LONG);
             itemCollection = new ItemCollection();
         }
     }
@@ -120,11 +120,6 @@ private String test = "";
         });
     }
 
-    private void setPrevNextImages() {
-        btnImgPrev.setImageDrawable(getPreviousDrawableBaseImage());
-        btnImgNext.setImageDrawable(getNextDrawableBaseImage());
-    }
-
     private void setPreviousButton() {
         btnImgPrev = findViewById(R.id.btnImgPrev);
         btnImgPrev.setImageDrawable(getPreviousDrawableBaseImage());
@@ -137,6 +132,11 @@ private String test = "";
             btnActiveItem.setImageDrawable(getDrawableBaseImage());
             setPrevNextImages();
         });
+    }
+
+    private void setPrevNextImages() {
+        btnImgPrev.setImageDrawable(getPreviousDrawableBaseImage());
+        btnImgNext.setImageDrawable(getNextDrawableBaseImage());
     }
 
     private void setActiveItemButton() {
@@ -168,19 +168,23 @@ private String test = "";
     }
 
     private Drawable getDrawableBaseImage() {
-        return getResources().getDrawable(itemCollection.getCurrentItem().getDrawableBaseImage());
+        return getDrawableFromId(itemCollection.getCurrentItem().getDrawableBaseImage());
     }
 
     private Drawable getNextDrawableBaseImage() {
-        return getResources().getDrawable(itemCollection.getNextItem().getDrawableBaseImage());
+        return getDrawableFromId(itemCollection.getNextItem().getDrawableBaseImage());
     }
 
     private Drawable getPreviousDrawableBaseImage() {
-        return getResources().getDrawable(itemCollection.getPreviousItem().getDrawableBaseImage());
+        return getDrawableFromId(itemCollection.getPreviousItem().getDrawableBaseImage());
     }
 
     private Drawable getDrawableActiveImage() {
-        return getResources().getDrawable(itemCollection.getCurrentItem().getDrawableActiveImage());
+        return getDrawableFromId(itemCollection.getCurrentItem().getDrawableActiveImage());
+    }
+
+    private Drawable getDrawableFromId(int id) {
+        return getResources().getDrawable(id);
     }
 
 }
